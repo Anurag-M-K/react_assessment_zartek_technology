@@ -12,7 +12,7 @@ function Header({totalCartCount}) {
   
   return (
 
-    <div className="flex sm:justify-between justify-around mt-5 sm:mt-0 ">
+    <div className="flex sm:justify-between justify-around   sm:mt-0 pt-5 border-t   ">
     <div className='flex text-xl font-medium text-gray-500'>
      <IoMdArrowBack className='sm:hidden me-5 mt-1'/> <h1 className="">UNI Resto Cafe</h1>
     </div>

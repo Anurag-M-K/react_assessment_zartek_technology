@@ -33,7 +33,7 @@ function Tabs() {
         >
           {cards[0]?.table_menu_list?.map((dishCategories, index) => {
             const isActive = activeButton === index;
-            const buttonClasses = `text-gray-600 inline-block font-bold border-b ${
+            const buttonClasses = `text-gray-400 inline-block font-bold border-b ${
               isActive ? 'border-red-600 text-red-600' : 'border-b-2'
             } cursor-pointer hover:scale-105 ease-in-out duration-300 w-36 mx-2 sm:mx-0 md:w-1/4`;
             return (

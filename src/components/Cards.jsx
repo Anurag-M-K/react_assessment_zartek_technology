@@ -58,11 +58,11 @@ function Cards({ dishes }) {
                   <h2 className="font-medium text-sm py-1">
                     {dish?.dish_currency + " " + dish?.dish_price}
                   </h2>
-                  <p className="text-gray-400 font-medium  py-1">
+                  <p className="text-gray-400   py-1">
                     {dish?.dish_description}
                   </p>
                   {dish?.dish_Availability ? (
-                    <div className="bg-green-600  sm:mt-3 mt-3  w-28 rounded-full flex justify-around text-white">
+                    <div className="bg-green-600  sm:mt-3 mt-3 hover:bg-green-500 ease-in-out duration-300  w-28 rounded-full flex justify-around text-white">
                       <button onClick={() => handleDecrement(index)}>-</button>
 
                       <h2> {counts[index]}</h2>
@@ -81,13 +81,13 @@ function Cards({ dishes }) {
 
               <div className="flex sm:items-start justify-end items-start sm:gap-x-20  md:col-span-2 ">
                 <div className="  pb-4 sm:pe-2 flex overflow-hidden  ">
-                  <h2 className="font-bold text-sm   flex justify-center items-center sm:me-20  ">
+                  <h2 className="font-bold text-sm   flex justify-center items-center sm:me-20 me-10 ">
                     {dish?.dish_calories} Calories
                   </h2>
                   {console.log(dish?.dish_image)}
                   <img
                     src={dish?.dish_image}
-                    className=" w-24 h-24 sm:rounded-xl rounded sm:w-28 sm:h-28"
+                    className="cursor-pointer hover:scale-105 ease-in-out duration-300 object-fit w-24 h-24 sm:rounded-xl rounded sm:w-28 sm:h-28"
                     alt="dishes"
                   />
                 </div>
