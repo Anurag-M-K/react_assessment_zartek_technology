@@ -1,23 +1,20 @@
 import React, { useState } from "react";
-import Header from "./Header";
 
 function Cards({ dishes }) {
   const [counts, setCounts] = useState(
-    dishes?.length ? Array(dishes.length).fill(0) : new Array()
+    dishes?.length ? Array(dishes.length).fill(0) : []
   );
-  const [totalCartCount, setTotalCartCount] = useState();
 
+  //adding to cartcount functions
   const handleIncrement = (index) => {
     setCounts((prevCounts) => {
       const newCounts = [...prevCounts];
       newCounts[index] += 1;
-      const totalCount = newCounts.reduce((acc, cur) => acc + cur, 0);
-      console.log(totalCount); // log the total count
-      setTotalCartCount(totalCount);
       return newCounts;
     });
   };
 
+  //removing from cart  functions
   const handleDecrement = (index) => {
     setCounts((prevCounts) => {
       const newCounts = [...prevCounts];
@@ -25,7 +22,6 @@ function Cards({ dishes }) {
         newCounts[index] -= 1;
       }
       const totalCount = newCounts.reduce((acc, cur) => acc + cur, 0);
-      console.log(totalCount); // log the total count
       return newCounts;
     });
   };
@@ -87,7 +83,7 @@ function Cards({ dishes }) {
                   {console.log(dish?.dish_image)}
                   <img
                     src={dish?.dish_image}
-                    className="cursor-pointer hover:scale-105 ease-in-out duration-300 object-fit w-24 h-24 sm:rounded-xl rounded sm:w-28 sm:h-28"
+                    className="cursor-pointer hover:scale-105 ease-in-out sm:mt-1 mt-4 border duration-300 object-fit w-24 h-24 sm:rounded-xl rounded sm:w-28 sm:h-28"
                     alt="dishes"
                   />
                 </div>
